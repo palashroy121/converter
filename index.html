@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicode</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style type="text/css">
+        @font-face {font-family: 'SolaimanLipi'; src: local('SolaimanLipi'), url(./fonts/solaimanlipi.woff) format('woff');}
+        @font-face {font-family: 'SutonnyMJ';  src: local('SutonnyMJ'), url(./fonts/SUTOM.woff) format('woff');}
+    </style>
+</head>
+<body>
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="logo-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="menu-area">
+                            <div class="d-flex d-lg-2-none">
+                                <div class="nav-scroller bg-primary shadow-sm w-100">
+                                    <nav class="nav nav-underline">
+                                        <a class="nav-link text-white" href="#"><img src="img/logo/logo-White.png" alt=""></a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/national">জাতীয়</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/politics">রাজনীতি</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/international">আন্তর্জাতিক</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/economy">অর্থনীতি</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/sports">খেলা</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/entertainment">বিনোদন</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/country">সারাদেশ</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/health">স্বাস্থ্য</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/education">শিক্ষা</a>
+                                        <a class="nav-link text-white" href="https://dp.dhakapost.com/lifestyle">লাইফস্টাইল</a>
+                                    </nav>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </header>
+    <!-- Header Area End -->
+
+    <!-- Main Area Start -->
+    <main>
+        <!-- text Converter Area Start -->
+        <section class="text-converter-area pt-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="voice-box mb-3 text-center">
+                            <a href="#">
+                                <div class="voice-icon">
+                                    <span class="btn"><i class="icofont icofont-mic"></i></span>
+                                    <div class="pulse-ring"></div>
+                                </div>
+                                <p>ভয়েস টাইপিং করতে ক্লিক করুন</p>
+                            </a>
+                        </div>
+                        <div class="text-box mb-3">
+                                <textarea class="uni-text unicode_textarea" id="EDT" name="EDT" cols="30" rows="10" placeholder="ইউনিকোড কি-বোর্ডের লেখা এখানে পেস্ট করুন"></textarea>
+                            <div class="btn-list text-center mb-3">
+                                <button id="bnw_cabtn" name="ConvertToAsciiButton" type="button" onclick="ConvertToTextArea('CONVERTEDT');">ইউনিকোড থেকে বিজয় <i class="icofont-arrow-down"></i></button>
+                                <button id="bnw_cubtn" name="ConvertButton" type="button" onclick="ConvertFromTextArea('CONVERTEDT');">বিজয় থেকে ইউনিকোড <i class="icofont-arrow-up"></i></button>
+                                <button>ইউনিকোড ভাঙা ঠিক করুন</button>
+                                <button>বিজয় ভাঙা ঠিক করুন</button>
+                                <button type="button" id="bnw_clearbtn" name="ClearButton" value onclick="ClearTextArea('EDT'); ClearTextArea('CONVERTEDT');">মুছে ফেলুন</button>
+                            </div>
+
+                            <form name=ConversionForm>
+                                <textarea class="bijoy-text bijoy_textarea" id="CONVERTEDT" name="CONVERTEDT" cols="30" rows="10" placeholder="বিজয় কি-বোর্ডের লেখা এখানে পেস্ট করুন"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- text Converter Area End -->
+
+    </main>
+    <!-- Main Area End -->
+
+    <!-- Footer Area -->
+    <footer class="footer-area pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="footer-text text-center">
+                        <h3>সম্পাদক: মহিউদ্দিন সরকার</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        function script(url) {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url;
+            var x = document.getElementsByTagName('head')[0];
+            x.appendChild(s);
+        }
+        (function() {
+            script('js/bijoy2uni.js');
+            script('js/uni2bijoy.js');
+            script('js/common.js');
+            script('js/layout.js');
+            script('js/js.js');
+            script('js/js1.js');
+            script('js/count.js');
+            script('js/code/rconverter.js');
+        })();
+        </script>
+        <script>
+        function updates(CONVERTEDT) {
+            var str = document.getElementById('CONVERTEDT').value;
+            var res = str.replace(/  /g, " ");
+            var res = res.replace(/šÔ/g, "š‘");
+            var res = res.replace(/ ‡/g, " †");
+            var res = res.replace(/¯Õ/g, "¯’v");
+            var res = res.replace(/ÓQ/g, "”Q");
+            var res = res.replace(/¯—/g, "¯Í");
+            var res = res.replace(/¯-/g, "¯Í");
+            var res = res.replace(/š—/g, "šÍ");
+            var res = res.replace(/š-/g, "šÍ");
+            var res = res.replace(/Ê/g, "Ð");
+            var res = res.replace(/¯'/g, "¯’");
+            var res = res.replace(/`ª“/g, "`ªæ");
+            var res = res.replace(/y/g, "z");
+            var res = res.replace(/«/g, "Ö");
+            var res = res.replace(/“/g, "æ");
+            var res = res.replace(/ ‰/g, " ˆ");
+            var res = res.replace(/~/g, "‚");
+            document.getElementById('CONVERTEDT').value = res;
+        }
+    
+        function update(EDT) {
+            var str = document.getElementById('EDT').value;
+            var res = str.replace(/š‘/g, "ন্তু");
+            var res = res.replace(/র্যাব/g, "র‌্যাব");
+            var res = res.replace(/র্যাবে/g, "র‌্যাবে");
+            var res = res.replace(/¯’া/g, "স্থা");
+            var res = res.replace(/”েছ/g, "চ্ছে");
+            var res = res.replace(/¯’/g, "স্থ");
+            var res = res.replace(/র“/g, "রু");
+            var res = res.replace(/¯’্য/g, "স্থ্য");
+            var res = res.replace(/¯্রা/g, "স্রা");
+            var res = res.replace(/¤œা/g, "ম্না");
+            var res = res.replace(/ত্র“/g, "ত্রু");
+            var res = res.replace(/তœ/g, "ত্ন");
+            var res = res.replace(/Ñ/g, "-");
+            document.getElementById('EDT').value = res;
+        }
+        </script>
+        <script>
+        document.querySelector(".bijoy-text-copy").onclick = function() {
+            document.querySelector(".textarealeft").select();
+            document.execCommand('copy');
+        };
+        document.querySelector(".unicode-text-copy").onclick = function() {
+            document.querySelector(".textarearight").select();
+            document.execCommand('copy');
+        };
+        </script>
+
+</body>
+</html>
