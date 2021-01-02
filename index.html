@@ -66,17 +66,17 @@
                             </a>
                         </div>
                         <div class="text-box mb-3">
-                                <textarea class="uni-text unicode_textarea" id="EDT" name="EDT" cols="30" rows="10" placeholder="ইউনিকোড কি-বোর্ডের লেখা এখানে পেস্ট করুন"></textarea>
+                                <textarea class="uni-text unicode_textarea" id="EDT" name="EDT" value cols="30" rows="10" placeholder="ইউনিকোড কি-বোর্ডের লেখা এখানে পেস্ট করুন"></textarea>
                             <div class="btn-list text-center mb-3">
-                                <button id="bnw_cabtn" name="ConvertToAsciiButton" type="button" onclick="ConvertToTextArea('CONVERTEDT');">ইউনিকোড থেকে বিজয় <i class="icofont-arrow-down"></i></button>
-                                <button id="bnw_cubtn" name="ConvertButton" type="button" onclick="ConvertFromTextArea('CONVERTEDT');">বিজয় থেকে ইউনিকোড <i class="icofont-arrow-up"></i></button>
+                                <button id="bnw_cabtn" name="ConvertToAsciiButton" type="button" value onclick="ConvertToTextArea('CONVERTEDT');">ইউনিকোড থেকে বিজয় <i class="icofont-arrow-down"></i></button>
+                                <button id="bnw_cubtn" name="ConvertButton" type="button" value onclick="ConvertFromTextArea('CONVERTEDT');">বিজয় থেকে ইউনিকোড <i class="icofont-arrow-up"></i></button>
                                 <button>ইউনিকোড ভাঙা ঠিক করুন</button>
                                 <button>বিজয় ভাঙা ঠিক করুন</button>
-                                <button type="button" id="bnw_clearbtn" name="ClearButton" value onclick="ClearTextArea('EDT'); ClearTextArea('CONVERTEDT');">মুছে ফেলুন</button>
+                                <button type="button" id="bnw_clearbtn" name="ClearButton" value value onclick="ClearTextArea('EDT'); ClearTextArea('CONVERTEDT');">মুছে ফেলুন</button>
                             </div>
 
                             <form name=ConversionForm>
-                                <textarea class="bijoy-text bijoy_textarea" id="CONVERTEDT" name="CONVERTEDT" cols="30" rows="10" placeholder="বিজয় কি-বোর্ডের লেখা এখানে পেস্ট করুন"></textarea>
+                                <textarea class="bijoy-text bijoy_textarea" id="CONVERTEDT" value name="CONVERTEDT" cols="30" rows="10" placeholder="বিজয় কি-বোর্ডের লেখা এখানে পেস্ট করুন"></textarea>
                             </form>
                         </div>
                     </div>
@@ -101,7 +101,6 @@
         </div>
     </footer>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
     <script>
         function script(url) {
             var s = document.createElement('script');
@@ -119,8 +118,8 @@
             script('js/js.js');
             script('js/js1.js');
             script('js/count.js');
-            script('js/code/rconverter.js');
-        })();
+            script('js/rconverter.js');
+        });
         </script>
         <script>
         function updates(CONVERTEDT) {
@@ -173,6 +172,16 @@
             document.execCommand('copy');
         };
         </script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" async="" src="js/bijoy2uni.js"></script>
+    <script type="text/javascript" async="" src="js/uni2bijoy.js"></script>
+    <script type="text/javascript" async="" src="js/common.js"></script>
+    <script type="text/javascript" async="" src="js/layout.js"></script>
+    <script type="text/javascript" async="" src="js/js.js"></script>
+    <script type="text/javascript" async="" src="js/js1.js"></script>
+    <script type="text/javascript" async="" src="js/count.js"></script>
+    <script type="text/javascript" async="" src="js/rconverter.js"></script>
 
 </body>
 </html>
